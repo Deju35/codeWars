@@ -1,8 +1,12 @@
 // Task
-// Given an array/list [] of integers , Construct a product array Of same size Such That prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
-
-function productArray(numbers){
-  return numbers.map(x => numbers.reduce((a,b) => a * b) / x)  
-
-
-}
+// Given an array/list [] of integers , Find The maximum difference between the successive elements in its sorted form.
+function maxGap (numbers){
+  let arr = numbers.sort((a,b)=> a-b)
+  let res = 0
+  for(let i = 0; i< arr.length; i++){
+    let diff = arr[i+1] - arr[i]
+      if(diff>res){
+        res = diff
+      }
+    }
+    return res
