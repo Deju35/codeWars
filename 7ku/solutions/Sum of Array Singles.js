@@ -7,3 +7,21 @@
 
 // Good luck!
 
+function repeats(arr){
+  let sum = 0
+  const hash = {}
+  for(let i of arr){
+    if(!hash[i]){
+      hash[i] = 1
+    }else{
+      hash[i]++
+    }
+  }
+  for(let i in hash)
+  if(hash[i]<2){
+    sum+=Number(i)
+  }
+  return sum
+//..
+};
+
