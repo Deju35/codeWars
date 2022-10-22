@@ -9,7 +9,7 @@
 
 function evenNumbers(array, number) {
   let res = array.filter((x)=>x%2==0)
-  return res.splice(res.length-number, number)
+  return res.splice(-number) // if the number is 4, return the last 4 even numbers
     
   
 
