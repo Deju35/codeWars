@@ -10,8 +10,8 @@ function solution(str){
   let result = []
   let str1 = str.split('')
    for(let i=0; i<str1.length; i+=2){
-     if(str1[i+1]) result.push(str1[i]+str1[i+1])
-     else result.push(str1[i] +  '_')
+     str1[i+1]? result.push(str1[i]+str1[i+1])
+     : result.push(str1[i] +  '_')
 }
   return result
   }
