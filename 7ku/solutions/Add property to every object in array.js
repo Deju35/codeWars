@@ -26,4 +26,4 @@
 //     corAnswer: 0,
 //     usersAnswer: null
 // }];
-questions.forEach((x)=>x.usersAnswer = null)
+questions.forEach((a)=>a.usersAnswer = null)
