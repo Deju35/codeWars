@@ -16,7 +16,7 @@ function duplicateCount(text){
   const hash = {}
   let newtext = text.toLowerCase()
   for(let i of newtext){
-    if(!hash[i])? hash[i] = 1 : hash[i]++
+    hash[i]? hash[i]++ : hash[i] = 1
   }
    for(let i in hash){
     if(hash[i]>1){
