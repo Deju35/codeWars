@@ -12,10 +12,10 @@
 // Kata.getMiddle("A") should return "A"
 
 function getMiddle(s){
-  let length = s.length
-  let middle = Math.floor(length/2)
+  let len = s.length
+  let middle = Math.floor(len/2)
   
-  if(length%2 === 0){  /// if list is even
+  if(len%2 === 0){  /// if list is even
     return s[middle-1] + s[middle]
   }else{// if odd
     return s[middle]
