@@ -6,3 +6,8 @@
 // Make sure that you don't count duplicates; for example solve([[1,2],[4,4],[5,6,6]]) = 4, since the extra outcomes are just duplicates.
 
 // See test cases for more examples.
+
+function solve(arr) {
+  const seT = new Set(arr)
+  return arr.reduce((acc,c)=>acc*= new Set(c).size,1);
+};
