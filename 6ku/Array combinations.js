@@ -8,6 +8,5 @@
 // See test cases for more examples.
 
 function solve(arr) {
-  const seT = new Set(arr)
   return arr.reduce((acc,c)=>acc*= new Set(c).size,1);
 };
