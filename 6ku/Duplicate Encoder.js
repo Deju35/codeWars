@@ -6,3 +6,19 @@
 // "recede"   =>  "()()()"
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))((" 
+
+
+function duplicateEncode(word){
+   var res='';
+    word = word.toLowerCase();
+    for(let i in word){
+        if(word.lastIndexOf(word[i]) == word.indexOf(word[i])){
+           res += '(';
+        }
+        else{
+            res += ')';
+        }
+    }
+    return res;
+
+}
