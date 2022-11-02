@@ -10,11 +10,11 @@
 // "Example Input" ==> "iNPUT eXAMPLE"
 
 function stringTransformer(str) {
-  const allUpper = 'abcdefghijklmnopqrstuvwxyz';
   return str
-     .split('')
-     .map(s=> allUpper.indexOf(s)=== -1? s.toLowerCase(): s.toUpperCase())
-     .join('')
      .split(' ')
      .reverse()
      .join(' ')
+     .split('')
+     .map(s=> s=== s.toUpperCase()? s.toLowerCase(): s.toUpperCase())
+     .join('')
+     
