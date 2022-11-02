@@ -8,3 +8,17 @@
 // For example:
 
 // "Example Input" ==> "iNPUT eXAMPLE"
+
+function stringTransformer(str) {
+  const allUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  return str
+     .split('')
+     .map(s=> allUpper.indexOf(s)=== -1? s.toUpperCase(): s.toLowerCase())
+     .join('')
+     .split(' ')
+     .reverse()
+     .join(' ')
+  
+  
+  // Your code here
+}
