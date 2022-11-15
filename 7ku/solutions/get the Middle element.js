@@ -14,3 +14,7 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 
+function gimme (triplet) {
+  return triplet.indexOf([...triplet].sort((a,b)=>a-b)[1])
+ 
+  }
