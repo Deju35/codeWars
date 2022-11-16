@@ -26,3 +26,17 @@
 // There is only ONE queue serving many tills, and
 // The order of the queue NEVER changes, and
 // The front person in the queue (i.e. the first element in the array/list) proceeds to a till as soon as it becomes free.
+
+// Input is an array comprised of customers waiting time and number of cashier tills available
+//PseudoCode initialize an array of zeros equal to number of tills
+// iterate through the array of customers waiting time and direct them to the cahsier till with least waiting time 
+const queueTime = function(customers, n){
+  let tills = new Array(n).fill(0) // fill an array with  zeros equal to the number of cashier tills(zeros since thats the waiting time initially)
+  customers.map(client=>{
+    let availableTill = tills.indexOf(Math.min(...tills)) // direct customer to cashier  till with the lowest wait time
+    tills[availableTill]+= client;
+    })
+    return Math.max(...tills)   //Return the cashier till that has the longest wait time since this is the time required to get all the customers through the tills
+  }
+  
+  console.log(queueTime([10,2,2,3],1))
