@@ -28,3 +28,15 @@
 // Note:
 // If you are given an array with multiple answers, return the lowest correct index.
 
+function findEvenIndex(arr)
+{
+  for(let i = 0; i<arr.length; i++){
+    const leftSide =arr.slice(0,i).reduce((acc,c)=> acc + c,0) 
+    const rightSide = arr.slice(i+1).reduce((acc,c)=>acc + c,0)
+      if(leftSide === rightSide){
+        return i
+      }
+       
+    }
+     return -1
+  }
